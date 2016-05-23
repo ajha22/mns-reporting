@@ -1,38 +1,23 @@
-[
-     {
-        "name" : "Weekly Report",
-        "day1" : "21-Feb-16",
-        "day2" : "28-Feb-16",
-        "day3" : "6-Mar-16",
-        "day4" : "13-Mar-16",
-        "day5" : "20-Mar-16",
-        "day6" : "27-Mar-16"
-    },
-    {
-        "name" : "Overall",
-        "day1" : "Green",
-        "day2" : "Green",
-        "day3" : "Green",
-        "day4" : "Green",
-        "day5" : "Green",
-        "day6" : "Green"
-    },
-    {
-        "name" : "Incidents",
-        "day1" : 69,
-        "day2" : 82,
-        "day3" : 87,
-        "day4" : 53,
-        "day5" : 68,
-        "day6" : 69
-    },
-    {
-        "name" : "Problem Records",
-        "day1" : 1,
-        "day2" : 5,
-        "day3" : 0,
-        "day4" : 3,
-        "day5" : 2,
-        "day6" : 2
-    }
-]
+[{
+  "Summary": "Single Prod/ non-Prod account for Bing request There is threshhold of 50 requested in 24 hrs",
+  "Priority": "High",
+  "Status": "Open",
+  "Category": "Issue",
+  "AssignedTo": "Aadil",
+  "Mitigation/Action": "'-Need to hold requests scheduled from Non-Prod environments to submit Prod request successfully. - Need to have separate Prod and Non Prod accounts.",
+  "PotentialImpact": "Request to Bing for Live updates like special opening hours for stores will not reflect ",
+  "ActionComment": "12/29/2015",
+  "DueDate": "2/20/2016"
+
+}, {
+  "Summary": "Stageprop session killed twice",
+  "Priority": "High",
+  "Status": "Open",
+  "Category": "Risk",
+  "AssignedTo": "Elaine",
+  "Mitigation/Action": "'- rerun the stageprop and remaining nightly jobs.RCA awiated from AT & T ",
+  "PotentialImpact": "New contents, promotions,products will not reflect on site,impacting the business plans ",
+  "ActionComment": "2/20/2016",
+  "DueDate": "4/8/2016"
+
+}]
