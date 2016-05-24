@@ -4,7 +4,7 @@
   "Status": "Open",
   "Category": "Issue",
   "AssignedTo": "Aadil",
-  "Mitigation/Action": "'-Need to hold requests scheduled from Non-Prod environments to submit Prod request successfully. - Need to have separate Prod and Non Prod accounts.",
+  "MitigationAction": "'-Need to hold requests scheduled from Non-Prod environments to submit Prod request successfully. - Need to have separate Prod and Non Prod accounts.",
   "PotentialImpact": "Request to Bing for Live updates like special opening hours for stores will not reflect ",
   "ActionComment": "12/29/2015",
   "DueDate": "2/20/2016"
@@ -15,7 +15,7 @@
   "Status": "Open",
   "Category": "Risk",
   "AssignedTo": "Elaine",
-  "Mitigation/Action": "'- rerun the stageprop and remaining nightly jobs.RCA awiated from AT & T ",
+  "MitigationAction": "'- rerun the stageprop and remaining nightly jobs.RCA awiated from AT & T ",
   "PotentialImpact": "New contents, promotions,products will not reflect on site,impacting the business plans ",
   "ActionComment": "2/20/2016",
   "DueDate": "4/8/2016"

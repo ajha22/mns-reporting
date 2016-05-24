@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>MNS-Reporting</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/riskIssuesController.js"></script>
+  <meta charset="UTF-8">
+  <title>MNS-Reporting</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/riskIssuesController.js"></script>
 </head>
+
 <body>
-    <main class="container" ng-app="weeklyReports" ng-controller="riskIssuesCtrl">
-        <div class="clearfix">
-            <img src="../images/mns-logo.jpg" alt="Marks and Spencer logo" id="mnsLogo">
-            <img src="../images/sapient-nitro.png" alt="SapientNitro logo" id="sapientLogo">
-        </div>
-        <section class="clearfix">
-            <table id="incidents">
-                <caption>Risks & Issues</caption>
-                <tr>
-                    <th>Summary<select></select></th>
-                    <th>Priority<select></select></th>
-                    <th>Status<select></select></th>
-                    <th>Category<select></select></th>
-                    <th>Assigned To<select></select></th>
-                    <th>Mitigation/Action<select></select></th>
-                    <th>Potential Impact<select></select></th>
-                    <th>Action Comment<select></select></th>
-                    <th>Due Date<select></select></th>
-                </tr>
-                <tr ng-repeat="data in riskReport">
-                    <td>{{data.Summary}}</td>
-                    <td>{{data.Priority}}</td>
-                    <td>{{data.Status}}</td>
-                    <td>{{data.Category}}</td>
-                    <td>{{data.AssignedTo}}</td>
-                    <td>{{data.Mitigation/Action}}</td>
-                    <td>{{data.PotentialImpact}}</td>
-                    <td>{{data.ActionComment}}</td>
-                    <td>{{data.DueDate}}</td>
-                </tr>
-            </table>
+  <main class="container" ng-app="weeklyReports" ng-controller="riskIssuesCtrl">
+    <div class="clearfix">
+      <img src="../images/mns-logo.jpg" alt="Marks and Spencer logo" id="mnsLogo">
+      <img src="../images/sapient-nitro.png" alt="SapientNitro logo" id="sapientLogo">
+    </div>
+    <section class="clearfix">
+      <button ng-click="sortTable()">sort</button>
+      <p>
+        <input type="text" ng-model="test" placeholder="search here">
+      </p>
+      <table id="incidents">
+        <caption>Risks & Issues</caption>
+        <tr>
+          <th>Summary
+            <select></select>
+          </th>
+          <th>Priority
+            <select></select>
+          </th>
+          <th>Status
+            <select></select>
+          </th>
+          <th>Category
+            <select></select>
+          </th>
+          <th>Assigned To
+            <select></select>
+          </th>
+          <th>Mitigation/Action
+            <select></select>
+          </th>
+          <th>Potential Impact
+            <select></select>
+          </th>
+          <th>Action Comment
+            <select></select>
+          </th>
+          <th>Due Date
+            <select></select>
+          </th>
+        </tr>
+        <tr ng-repeat="data in riskReport | filter : test" ng-model="riskReport">
+          <td>{{data.Summary}}</td>
+          <td>{{data.Priority}}</td>
+          <td>{{data.Status}}</td>
+          <td>{{data.Category}}</td>
+          <td>{{data.AssignedTo}}</td>
+          <td>{{data.MitigationAction}}</td>
+          <td>{{data.PotentialImpact}}</td>
+          <td>{{data.ActionComment}}</td>
+          <td>{{data.DueDate}}</td>
+        </tr>
+      </table>
+    </section>
 
-        </section>
-
-    </main>
+  </main>
 </body>
+
 </html>
